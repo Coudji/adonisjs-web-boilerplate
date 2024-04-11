@@ -1,31 +1,62 @@
 Boilerplate for the [Adonisjs framework](https://adonisjs.com/) based on the [web starter kit](https://docs.adonisjs.com/guides/installation#web-starter-kit)
 
+Use Adonisjs v6
+Node.js >= 20.6 required
+
 This boilerplate contain:
-* The adonisjs framework's core
-* The adonisjs auth package configured to session
-* The adonisjs shield package for frontend security
-* The adonisjs static package to serve static assets
+* Adonisjs framework's core
+* Adonisjs auth package configured to session
+* Adonisjs shield package for frontend security
+* Adonisjs static package to serve static assets
 * Edge template engine for HTML pages composition
 * Lucid ORM preconfigured to use PostgreSQL
 * VineJS for validation
 * Vite for frontend assets compilation
+* Added docker-compose file for setup the DB
 
 
 
 # Usage
 
-**clone the repo:** (replace folder-name by what you want)
+**Clone the repo:** (replace folder-name by what you want)
 
 `git clone https://github.com/Coudji/adonisjs-web-boilerplate folder-name` and remove the .git folder
 
-**or**
+**Or**
 
 `npx degit https://github.com/Coudji/adonisjs-web-boilerplate folder-name`
 
-**install the dependencies with pnpm:**
+**Install the dependencies with pnpm:**
 
 `pnpm i`
 
-**start the dev server:**
+**Setup environement variables:**
+
+`cp .env.example .env`
+
+Don't forget to fill the missing parts
+
+```
+DB_PASSWORD=YOUR_DB_PASSWORD
+DB_DATABASE=YOUR_DB_NAME
+```
+
+**Generate a new APP_KEY:**
+
+`node ace generate:key`
+
+**Mounting the Docker container if needed:**
+
+`docker compose up -d`
+
+**Migrate the db:**
+
+`node ace migration:run`
+
+**Start the dev server:**
 
 `pnpm dev`
+
+**To view all aviable commands:**
+
+`node ace`
