@@ -1,7 +1,8 @@
 Boilerplate for the [Adonisjs framework](https://adonisjs.com/) based on the [web starter kit](https://docs.adonisjs.com/guides/installation#web-starter-kit)
 
 Use Adonisjs v6
-Node.js >= 20.6 required
+
+:warning: Node.js >= 20.6 required
 
 This boilerplate contain:
 * Adonisjs framework's core
