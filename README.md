@@ -14,6 +14,7 @@ This boilerplate contain:
 * VineJS for validation
 * Vite for frontend assets compilation
 * Added docker-compose file for setup the DB
+* Added tailwindcss support
 
 
 
